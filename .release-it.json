@@ -1,13 +1,9 @@
 {
   "git": {
-    "commitMessage": "chore: release111 v${version}",
-    "commit": true,
+    "commit": false,
     "tag": true,
-    "push": true,
+    "push": false,
     "requireCleanWorkingDir": false
-  },
-  "hooks": {
-    "before:init": ["npx --no-install lint-staged --quiet"]
   },
   "plugins": {
     "@release-it/conventional-changelog": {
