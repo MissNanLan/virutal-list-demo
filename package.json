@@ -11,9 +11,6 @@
     ]
   },
   "dependencies": {
-    "conventional-changelog-cli": "^3.0.0",
-    "semantic-release": "^21.0.7",
-    "semantic-release-cli": "^5.4.4",
     "umi": "^4.0.70"
   },
   "devDependencies": {
