@@ -6,6 +6,12 @@
     "push": true,
     "requireCleanWorkingDir": false
   },
+  "plugins": {
+    "@release-it/conventional-changelog": {
+      "preset": "angular",
+      "infile": "CHANGELOG.md"
+    }
+  },
   "github": {
     "release": true
   },
