@@ -1,10 +1,9 @@
 {
+  "version": "0.0.4",
   "private": true,
   "scripts": {
     "build": "umi build",
-    "prepublishOnly": "pnpm build",
-    "version": "conventional-changelog -p angular -i CHANGELOG.md -s",
-    "postversion": "git push --follow-tags"
+    "release": "release-it"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,css,less}": [
@@ -18,6 +17,7 @@
     "umi": "^4.0.70"
   },
   "devDependencies": {
+    "@release-it/conventional-changelog": "^6.0.0",
     "@types/react": "^18.2.11",
     "@types/react-dom": "^18.2.4",
     "@umijs/lint": "^4.0.72",
@@ -27,8 +27,8 @@
     "prettier": "^2",
     "prettier-plugin-organize-imports": "^2",
     "prettier-plugin-packagejson": "^2",
+    "release-it": "^16.1.0",
     "stylelint": "^15.9.0",
     "typescript": "^4"
-  },
-  "version": "0.0.2"
+  }
 }
