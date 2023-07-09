@@ -8,18 +8,6 @@ const VirtualList = ({ itemHeight, data, containerHeight }) => {
   const [startIndex, setStartIndex] = useState(0);
   const [endIndex, setEndIndex] = useState(0);
 
-  useEffect(() => {
-    calculateVisibleRange();
-  }, []);
-
-  useEffect(() => {
-    renderVisibleItems();
-
-    listContentRef.current.style.webkitTransform = `translate3d(0, ${
-      startIndex * itemHeight
-    }px, 0)`;
-  }, [startIndex, endIndex]);
-
   const calculateVisibleRange = () => {
     const scrollTop = listRef?.current?.scrollTop;
     console.log("scrollTop", scrollTop);
@@ -39,6 +27,17 @@ const VirtualList = ({ itemHeight, data, containerHeight }) => {
     ));
     setVisibleItems(items);
   };
+  useEffect(() => {
+    calculateVisibleRange();
+  }, []);
+
+  useEffect(() => {
+    renderVisibleItems();
+
+    listContentRef.current.style.webkitTransform = `translate3d(0, ${
+      startIndex * itemHeight
+    }px, 0)`;
+  }, [startIndex, endIndex]);
 
   return (
     <div
@@ -54,8 +53,10 @@ const VirtualList = ({ itemHeight, data, containerHeight }) => {
         }}
       ></div>
       <div className="list-view-content" ref={listContentRef}>
-        {visibleItems.map((item) => (
-          <div style={{ height: `${itemHeight}px` }}>{item}</div>
+        {visibleItems.map((item, index) => (
+          <div style={{ height: `${itemHeight}px` }} key={index}>
+            {item}
+          </div>
         ))}
       </div>
     </div>
