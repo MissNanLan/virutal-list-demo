@@ -2,9 +2,12 @@
   "git": {
     "commit": false,
     "tag": true,
-    "push": true,
+    "push": false,
     "pushRepo": "git@github.com:MissNanLan/virutal-list-demo.git",
     "requireCleanWorkingDir": false
+  },
+  "hooks": {
+    "after:git:release": "git push origin HEAD"
   },
   "plugins": {
     "@release-it/conventional-changelog": {
