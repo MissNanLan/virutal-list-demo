@@ -1,6 +1,6 @@
 {
   "git": {
-    "commit": true,
+    "commit": false,
     "tag": true,
     "push": true,
     "requireCleanWorkingDir": false
