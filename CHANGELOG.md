@@ -1,5 +1,12 @@
 
 
+## [0.0.20](https://github.com/MissNanLan/virutal-list-demo/compare/0.0.19...0.0.20) (2023-07-09)
+
+
+### 📚文档
+
+* add 文档1 ([79b1c5b](https://github.com/MissNanLan/virutal-list-demo/commit/79b1c5bdfb1df2f52be177b77638a63c28dd5c20))
+
 ## [0.0.19](https://github.com/MissNanLan/virutal-list-demo/compare/0.0.17...0.0.19) (2023-07-09)
 
 
