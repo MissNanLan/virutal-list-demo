@@ -3,7 +3,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source code
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
         with:
           fetch-depth: 0
       - name: Install the dependencies
@@ -13,7 +13,7 @@ jobs:
           git config user.name "MissNanLan"
           git config user.email "nanlan.yj@foxmail.com"
       - name: Run Release
-      - run: npm run release --ci
+        run: npm run release --ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: End Message
