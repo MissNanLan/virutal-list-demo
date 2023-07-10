@@ -4,7 +4,8 @@
     "tag": true,
     "push": false,
     "pushRepo": "git@github.com:MissNanLan/virutal-list-demo.git",
-    "requireCleanWorkingDir": false
+    "requireCleanWorkingDir": false,
+    "requireBranch": "master"
   },
   "hooks": {
     "after:git:release": "git push origin HEAD"

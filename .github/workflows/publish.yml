@@ -1,18 +1,20 @@
-on:
-  push:
-    tags:
-      - 'v*' # 这段的意思是仅在出现名为 v 字符开头的tag时，触发此任务，如v1.2.1
-name: Publish
 jobs:
-  publish:
+  release:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout source code
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
         with:
-          node-version: 10
-          registry-url: https://registry.npmjs.org/
-      - run: npm i
-      - run: npm publish # 如果发布之前需要构建，可添加prepublishOnly的生命周期脚本
+          fetch-depth: 0
+      - name: Install the dependencies
+        run: npm ci
+      - name: git config
+        run: |
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+      - name: Run Release
+      - run: npm run release --ci
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}} # 上面在Github Secrets中设置的密钥
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: End Message
+        run: echo 'Success'
