@@ -1,9 +1,10 @@
 {
-  "version": "0.0.21",
+  "version": "0.0.22",
   "private": true,
   "scripts": {
     "build": "umi build",
-    "release": "release-it"
+    "release": "release-it",
+    "release:beta": "release-it premajor --preReleaseId=beta --npm.tag=beta --github.preRelease"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,css,less}": [
