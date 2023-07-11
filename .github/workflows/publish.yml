@@ -28,7 +28,7 @@ jobs:
           cache: 'pnpm'
 
       - name: Install the dependencies
-        run: pnpm ci
+        run: pnpm i
 
       - name: git config
         run: |
