@@ -32,9 +32,7 @@ jobs:
 
       - name: git config
         run: |
-          git config user.name "MissNanLan"
-          git config user.email "nanlan.yj@foxmail.com"
-          git remote set-url origin https://github.com/MissNanLan/virutal-list-demo.git
+          git remote set-url origin git@github.com:MissNanLan/virutal-list-demo.git
 
       - name: Run Release
         run: pnpm release --ci
