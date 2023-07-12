@@ -1,8 +1,9 @@
 {
   "git": {
-    "commit": false,
+    "commit": true,
+    "chore": "release v${version}",
     "tag": true,
-    "push": false,
+    "push": true,
     "pushRepo": "git@github.com:MissNanLan/virutal-list-demo.git",
     "requireCleanWorkingDir": false,
     "requireBranch": "master"
