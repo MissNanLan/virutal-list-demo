@@ -2,6 +2,7 @@
   "git": {
     "tag": true,
     "push": true,
+    "commit": false,
     "requireCleanWorkingDir": false,
     "requireBranch": "master"
   },
