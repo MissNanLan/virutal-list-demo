@@ -32,8 +32,8 @@ jobs:
 
       - name: git config
         run: |
-          git config user.name "NanLan"
-          git config user.email "nanlan.yj@foxmail.com"
+          git config --global user.name 'MissNanLan'
+          git config --global user.email 'MissNanLan@users.noreply.github.com'
 
       - name: Run Release
         run: pnpm release
