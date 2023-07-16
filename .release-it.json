@@ -8,9 +8,7 @@
     "requireCleanWorkingDir": false,
     "requireBranch": "master"
   },
-  "hooks": {
-    "after:git:release": "git push origin HEAD"
-  },
+  "hooks": {},
   "plugins": {
     "@release-it/conventional-changelog": {
       "infile": "CHANGELOG.md",
