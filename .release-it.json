@@ -4,7 +4,7 @@
     "chore": "release v${version}",
     "tag": true,
     "push": true,
-    // "pushRepo": "git@github.com:MissNanLan/virutal-list-demo.git",
+
     "requireCleanWorkingDir": false,
     "requireBranch": "master"
   },
