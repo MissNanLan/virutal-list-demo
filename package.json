@@ -1,9 +1,9 @@
 {
-  "version": "1.0.3",
+  "version": "1.0.5",
   "private": true,
   "scripts": {
     "build": "umi build",
-    "release": "release-it",
+    "release": "release-it --ci",
     "release:beta": "release-it patch --preRelease=beta"
   },
   "lint-staged": {
