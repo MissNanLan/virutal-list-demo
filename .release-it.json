@@ -4,11 +4,13 @@
     "chore": "release v${version}",
     "tag": true,
     "push": true,
-    "pushRepo": "git@github.com:MissNanLan/virutal-list-demo.git",
+    // "pushRepo": "git@github.com:MissNanLan/virutal-list-demo.git",
     "requireCleanWorkingDir": false,
     "requireBranch": "master"
   },
-  "hooks": {},
+  "hooks": {
+    "before:init": ["git pull"]
+  },
   "plugins": {
     "@release-it/conventional-changelog": {
       "infile": "CHANGELOG.md",
