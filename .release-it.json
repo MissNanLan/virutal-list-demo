@@ -1,10 +1,7 @@
 {
   "git": {
-    "commit": true,
-    "chore": "release v${version}",
     "tag": true,
     "push": true,
-
     "requireCleanWorkingDir": false,
     "requireBranch": "master"
   },
