@@ -34,7 +34,8 @@
     }
   },
   "github": {
-    "release": true
+    "release": true,
+    "releaseNotes": "generate-release-notes.sh --from=${latestTag} --to=${tagName}"
   },
   "npm": {
     "publish": false
