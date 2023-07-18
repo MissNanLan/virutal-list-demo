@@ -35,7 +35,7 @@
   },
   "github": {
     "release": true,
-    "releaseNotes": "generate-release-notes.sh --from=${latestTag} --to=${tagName}"
+    "releaseNotes": "git log --no-merges --pretty=format:\"* %s %h\" ${latestTag}...master"
   },
   "npm": {
     "publish": false
