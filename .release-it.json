@@ -4,7 +4,8 @@
     "push": true,
     "commit": true,
     "requireCleanWorkingDir": false,
-    "requireBranch": "master"
+    "requireBranch": "master",
+    "getLatestTagFromAllRefs": false
   },
   "hooks": {
     "before:init": ["git pull"]
