@@ -1,10 +1,15 @@
 on:
+  pull_requests:
+    branches:
+      - master
+      - develop
   push:
     branches:
       - master
       - develop
+
 jobs:
-  release:
+  build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -37,11 +42,8 @@ jobs:
           git config --global user.email 'MissNanLan@users.noreply.github.com'
 
       - name: Run Release
-        - if: ${{github.branch == 'develop'}}
-          run: pnpm release:beta
-        - if: ${{github.branch === 'master'}}
-          run: pnpm release
-
+         run: echo github branch ${{github.branch}}
+      
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
