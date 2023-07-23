@@ -2,6 +2,7 @@ on:
   push:
     branches:
       - master
+      - develop
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -36,7 +37,11 @@ jobs:
           git config --global user.email 'MissNanLan@users.noreply.github.com'
 
       - name: Run Release
-        run: pnpm release
+        - if: ${{github.branch == 'develop'}}
+          run: pnpm release:beta
+        - if: ${{github.branch === 'master'}}
+          run: pnpm release
+
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
