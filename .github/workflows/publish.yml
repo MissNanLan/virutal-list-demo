@@ -42,8 +42,9 @@ jobs:
           git config --global user.email 'MissNanLan@users.noreply.github.com'
 
       - name: Run Release
-         run: echo Source branch is ${{ github.head_ref }}
-         run: echo ${{ github.ref }}
+       run: |
+          echo Source branch is ${{ github.head_ref }}
+          echo ${{ github.ref }}
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
