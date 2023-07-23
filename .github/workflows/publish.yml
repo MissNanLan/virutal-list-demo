@@ -1,8 +1,4 @@
 on:
-  push:
-    branches:
-      - master
-      - develop
   pull_requests:
     branches:
       - master
@@ -41,7 +37,8 @@ jobs:
           git config --global user.email 'MissNanLan@users.noreply.github.com'
 
       - name: Run Release
-
+         run: echo github branch ${{github.branch}}
+      
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
