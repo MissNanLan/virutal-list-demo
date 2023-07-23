@@ -3,8 +3,13 @@ on:
     branches:
       - master
       - develop
+  push:
+    branches:
+      - master
+      - develop
+
 jobs:
-  release:
+  build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
