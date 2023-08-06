@@ -1,0 +1,10 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check run id
+        run: echo "The run id is ${{ github.run_id }}"
