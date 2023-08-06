@@ -42,7 +42,7 @@ jobs:
           git config --global user.email 'MissNanLan@users.noreply.github.com'
 
       - name: Run Release
-       run: |
+        run: |
           echo Source branch is ${{ github.head_ref }}
           echo ${{ github.ref }}
 
