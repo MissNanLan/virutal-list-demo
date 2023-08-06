@@ -8,6 +8,5 @@ jobs:
     steps:
       - name: Check run head_ref
         run: echo "The head_ref is ${{ github.head_ref }}"
-
       - name: Echo OS
         run: echo "The os is ${{ runner.os }}"
